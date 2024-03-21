@@ -84,7 +84,7 @@ app.layout = html.Div([
 def update_graph(selected_countries, selected_years):
     filtered_df = df_melted[df_melted['country'].isin(selected_countries)]
     filtered_df = filtered_df[filtered_df['year'].between(selected_years[0], selected_years[1])]
-    fig = px.line(filtered_df, x='year', y='gdpPerCap', color='country', title='GDP Per Capita Over Time') # specifying graph specifics
+    fig = px.line(filtered_df, x='year', y='gdpPerCap', color='country', title='GDP Per Capita Over Time') # specifying graph specifics (axes, how to fill in 'color' of graph, title)
     fig.update_layout(xaxis_title='Year', yaxis_title='GDP Per Capita')
     return fig
 
